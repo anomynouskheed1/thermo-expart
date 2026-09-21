@@ -61,7 +61,7 @@ export default function ServicesPage() {
                                         {service.title}
                                     </h3>
                                     <p className="text-neutral-600 text-xs md:text-sm font-body leading-relaxed line-clamp-3 mb-6">
-                                        {service.intro}
+                                        {service.description}
                                     </p>
                                 </div>
 

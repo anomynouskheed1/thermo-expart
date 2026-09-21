@@ -1,11 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-// Helper animation variants for letter-by-letter staggering
-const letterAnimation = {
+// Helper animation variants typed securely for Framer Motion
+const letterAnimation: Variants = {
     hidden: { opacity: 0, y: 20, scale: 0.9 },
     visible: (i: number) => ({
         opacity: 1,
@@ -17,7 +17,7 @@ const letterAnimation = {
             damping: 12,
             stiffness: 150,
         },
-    }),
+    } as any),
 };
 
 export default function FinalCtaSection() {
@@ -95,7 +95,7 @@ export default function FinalCtaSection() {
                     {/* Right Column: Architectural Project Photo */}
                     <div className="relative lg:col-span-5 h-[350px] md:h-[420px] w-full border border-black/15 overflow-hidden group">
                         <Image
-                            src="/images/projects/project-1.jpg" // Ensure path matches your project photo asset
+                            src="/images/projects/project-1.jpg"
                             alt="Thermo Expert completed construction project"
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"

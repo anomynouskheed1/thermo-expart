@@ -36,7 +36,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     <div className="lg:col-span-8">
                         <div className="flex items-center gap-3 mb-3">
                             <span className="h-px w-8 bg-cyan" />
-                            <p className="label-technical text-cyan text-xs">PROJECT #{project.id || "01"}</p>
+                            <p className="label-technical text-cyan text-xs">PROJECT #{project.slug.toUpperCase()}</p>
                         </div>
                         <h1 className="font-heading font-semibold text-4xl md:text-6xl lg:text-[5rem] leading-[0.95] tracking-[-0.03em] mb-4">
                             {project.title}
@@ -94,7 +94,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                             ARCHITECTURAL SCOPE & EXECUTION
                         </h2>
                         <p className="text-white/70 font-body text-sm md:text-base leading-relaxed">
-                            This  installation highlights our commitment to structural integrity, precise spatial planning, and high-performance material standards. Every phase was engineered to align with rigorous safety parameters and contemporary design constraints.
+                            This installation highlights our commitment to structural integrity, precise spatial planning, and high-performance material standards. Every phase was engineered to align with rigorous safety parameters and contemporary design constraints.
                         </p>
                         <div className="pt-4 border-t border-white/10">
                             <ul className="space-y-3 font-mono text-xs text-white/80">
@@ -142,7 +142,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                             READY TO START YOUR BUILD?
                         </h2>
                         <p className="text-white/60 text-xs md:text-sm font-body mb-6">
-                            Let's discuss how Thermo Expert can apply this level of precision to your upcoming development.
+                            Let&apos;s discuss how Thermo Expert can apply this level of precision to your upcoming development.
                         </p>
                         <Link
                             href="/contact"

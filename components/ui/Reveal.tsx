@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "node_modules/react"; // Adjust import if needed or use standard 'react'
+import { ReactNode } from "react";
 
 interface RevealProps {
     children: ReactNode;
