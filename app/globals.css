@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors from logo */
+  --color-navy: #0a1e3d;
+  --color-navy-light: #12294f;
+  --color-blue: #1e5fa8;
+  --color-cyan: #3bb4e5;
+  --color-charcoal: #16181c;
+  --color-concrete: #8b8d92;
+  --color-offwhite: #f5f5f3;
+
+  /* Fonts */
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-dm-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-offwhite);
+  color: var(--color-navy);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+/* Uppercase technical label style, used across the site */
+.label-technical {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
