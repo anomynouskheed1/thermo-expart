@@ -77,7 +77,7 @@ export default function ProcessSection() {
                             </div>
 
                             {/* Content */}
-                            <h3 className="font-heading font-medium text-xl text-cyan mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
+                            <h3 className="font-heading font-medium text-xl text-cyan-soft mb-3 tracking-tight group-hover:text-white transition-colors duration-300">
                                 {step.title}
                             </h3>
 
