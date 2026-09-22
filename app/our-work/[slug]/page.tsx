@@ -112,47 +112,43 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     </div>
 
                     {/* Secondary Gallery Showcase */}
+                    {/* Secondary Gallery Showcase */}
                     <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="relative aspect-[4/3] bg-[#151c24] border border-white/15 overflow-hidden">
-                            <Image
-                                src={project.image}
-                                alt={`${project.title} detail view 1`}
-                                fill
-                                className="object-cover hover:scale-105 transition-transform duration-500"
-                                sizes="(max-width: 768px) 100vw, 35vw"
-                            />
-                        </div>
-                        <div className="relative aspect-[4/3] bg-[#151c24] border border-white/15 overflow-hidden">
-                            <Image
-                                src={project.image}
-                                alt={`${project.title} detail view 2`}
-                                fill
-                                className="object-cover hover:scale-105 transition-transform duration-500"
-                                sizes="(max-width: 768px) 100vw, 35vw"
-                            />
+                        {project.gallery.map((img, idx) => (
+                            <div
+                                key={idx}
+                                className="relative aspect-[4/3] bg-[#151c24] border border-white/15 overflow-hidden"
+                            >
+                                <Image
+                                    src={img}
+                                    alt={`${project.title} detail view ${idx + 1}`}
+                                    fill
+                                    className="object-cover hover:scale-105 transition-transform duration-500"
+                                    sizes="(max-width: 768px) 100vw, 35vw"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                    {/* Final Project CTA Section */}
+                    <div className="border border-white/15 bg-[#151c24]/50 p-8 md:p-12 text-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-2"></div>
+                        <div className="relative z-10 max-w-xl mx-auto">
+                            <h2 className="font-heading text-2xl md:text-3xl font-medium mb-3">
+                                READY TO START YOUR BUILD?
+                            </h2>
+                            <p className="text-white/60 text-xs md:text-sm font-body mb-6">
+                                Let&apos;s discuss how Thermo Expert can apply this level of precision to your upcoming development.
+                            </p>
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center justify-center gap-3 bg-cyan text-navy font-mono text-xs tracking-widest uppercase px-6 py-3.5 font-medium hover:bg-white transition-colors"
+                            >
+                                INITIATE CONSULTATION →
+                            </Link>
                         </div>
                     </div>
-                </div>
 
-                {/* Final Project CTA Section */}
-                <div className="border border-white/15 bg-[#151c24]/50 p-8 md:p-12 text-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-2"></div>
-                    <div className="relative z-10 max-w-xl mx-auto">
-                        <h2 className="font-heading text-2xl md:text-3xl font-medium mb-3">
-                            READY TO START YOUR BUILD?
-                        </h2>
-                        <p className="text-white/60 text-xs md:text-sm font-body mb-6">
-                            Let&apos;s discuss how Thermo Expert can apply this level of precision to your upcoming development.
-                        </p>
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center justify-center gap-3 bg-cyan text-navy font-mono text-xs tracking-widest uppercase px-6 py-3.5 font-medium hover:bg-white transition-colors"
-                        >
-                            INITIATE CONSULTATION →
-                        </Link>
-                    </div>
                 </div>
-
             </div>
         </main>
     );

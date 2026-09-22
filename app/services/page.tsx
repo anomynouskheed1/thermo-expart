@@ -19,7 +19,7 @@ export default function ServicesPage() {
                         </p>
                     </div>
                     <h1 className="font-heading font-semibold text-3xl md:text-4xl lg:text-[3.5rem] leading-[1.05] tracking-[-0.03em] text-[#111622]">
-                        ARCHITECTURAL <br />
+                        OUR <br />
                         <span className="text-neutral-400">SERVICES.</span>
                     </h1>
                 </div>
@@ -66,7 +66,7 @@ export default function ServicesPage() {
                                 </div>
 
                                 <div className="pt-6 border-t border-neutral-200 flex items-center justify-between text-xs font-mono text-neutral-500">
-                                    <span className="group-hover:text-neutral-900 transition-colors">VIEW SPECIFICATION</span>
+                                    <span className="group-hover:text-neutral-900 transition-colors">VIEW DETAILS</span>
                                     <span className="flex items-center justify-center w-8 h-8 border border-neutral-300 bg-neutral-100 text-neutral-900 transition-all duration-300 group-hover:bg-neutral-900 group-hover:border-neutral-900 group-hover:text-white">
                                         →
                                     </span>

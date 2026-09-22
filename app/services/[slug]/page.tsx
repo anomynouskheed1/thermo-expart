@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/services";
-import { ArrowLeft, CheckCircle2, ArrowRight, Layers } from "lucide-react";
+import { CheckCircle2, ArrowLeft, ArrowRight, Layers } from "lucide-react";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -19,7 +19,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     return (
         <main className="min-h-screen bg-navy text-white pt-24 pb-28 border-t border-white/10 selection:bg-cyan selection:text-navy">
             <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-
                 {/* Back Link */}
                 <div className="mb-8">
                     <Link
@@ -35,7 +34,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 <div className="max-w-4xl mb-12">
                     <div className="flex items-center gap-3 mb-3">
                         <span className="h-px w-8 bg-cyan" />
-                        <p className="label-technical text-cyan text-xs">PRACTICE AREA</p>
+                        <p className="label-technical text-cyan text-xs">SERVICE</p>
                     </div>
                     <h1 className="font-heading font-semibold text-4xl md:text-6xl lg:text-[4.8rem] leading-[0.95] tracking-[-0.03em] mb-6">
                         {service.title}
@@ -59,17 +58,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
                 {/* Main Content Grid: Description & What It Covers */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-20 border-b border-white/15">
-
                     {/* Left Column: Service Description */}
                     <div className="lg:col-span-6 space-y-6">
                         <h2 className="font-heading text-2xl md:text-3xl font-medium tracking-tight">
-                            OVERVIEW & APPROACH
+                            SCOPE &amp; APPROACH
                         </h2>
                         <p className="text-white/70 font-body text-sm md:text-base leading-relaxed">
                             {service.description}
-                        </p>
-                        <p className="text-white/60 font-body text-sm leading-relaxed">
-                            We deploy seasoned engineers, state-of-the-art tools, and strict quality control measures to ensure that every metric matches the highest industry standards.
                         </p>
                     </div>
 
@@ -78,11 +73,14 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         <div>
                             <div className="flex items-center gap-2 mb-6 text-cyan font-mono text-xs tracking-widest uppercase">
                                 <Layers className="w-4 h-4" />
-                                Core Capabilities & Scope
+                                What This Covers
                             </div>
                             <ul className="space-y-4">
                                 {service.features.map((feature, idx) => (
-                                    <li key={idx} className="flex items-start gap-3 font-body text-sm md:text-base text-white/90">
+                                    <li
+                                        key={idx}
+                                        className="flex items-start gap-3 font-body text-sm md:text-base text-white/90"
+                                    >
                                         <CheckCircle2 className="w-5 h-5 text-cyan shrink-0 mt-0.5" />
                                         <span>{feature}</span>
                                     </li>
@@ -90,14 +88,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                             </ul>
                         </div>
                     </div>
-
                 </div>
 
                 {/* Related Project Showcase Box */}
                 <div className="mt-16 bg-[#151c24] border border-white/15 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
                     <div>
                         <span className="font-mono text-[10px] tracking-widest uppercase text-cyan block mb-2">
-                            RELATED PORTFOLIO CASE
+                            RELATED PROJECT
                         </span>
                         <h3 className="font-heading text-2xl md:text-3xl text-white font-medium">
                             {service.relatedProjectTitle}
@@ -111,7 +108,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                 </div>
-
             </div>
         </main>
     );

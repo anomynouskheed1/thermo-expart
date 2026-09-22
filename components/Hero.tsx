@@ -29,7 +29,7 @@ export default function Hero() {
                 }}
                 transition={{
                     duration: 0.4,
-                    delay: baseDelay + index * 0.03, // Stagger letter by letter
+                    delay: baseDelay + index * 0.03,
                     ease: [0.22, 1, 0.36, 1],
                 }}
                 className={`inline-block whitespace-pre ${isCyan ? "text-cyan" : "text-white"}`}
@@ -48,10 +48,12 @@ export default function Hero() {
                     alt="Modern construction site — Thermo Expert Construction Company Ltd"
                     fill
                     priority
-                    className="object-cover"
+                    className="object-cover saturate-[1.15] contrast-[1.08] brightness-[1.05]"
                     sizes="100vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/40" />
+                {/* Directional overlay — darkest at bottom-left where text sits, clear on the right */}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/45 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/10 to-transparent" />
             </div>
 
             {/* Content */}
