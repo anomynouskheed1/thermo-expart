@@ -8,7 +8,6 @@ import Image from "next/image";
 export default function Hero() {
     const [triggerKey, setTriggerKey] = useState(0);
 
-    // Re-trigger the letter bounce animation every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setTriggerKey((prev) => prev + 1);
@@ -17,7 +16,6 @@ export default function Hero() {
         return () => clearInterval(interval);
     }, []);
 
-    // Helper to split text strings into animated letters
     const renderAnimatedText = (text: string, baseDelay: number, isCyan = false) => {
         return text.split("").map((letter, index) => (
             <motion.span
@@ -48,12 +46,12 @@ export default function Hero() {
                     alt="Thermo Expert construction team at an active building site"
                     fill
                     priority
-                    className="object-cover saturate-[1.15] contrast-[1.08] brightness-[1.05]"
+                    className="object-cover object-[70%_center] md:object-center saturate-[1.15] contrast-[1.08] brightness-[1.05]"
                     sizes="100vw"
                 />
                 {/* Directional overlay — darkest at bottom-left where text sits, clear on the right */}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/45 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent md:via-navy/45" />
+                <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/20 to-transparent md:from-navy/70 md:via-navy/10" />
             </div>
 
             {/* Content */}
@@ -62,7 +60,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
-                    className="label-technical text-cyan mb-4"
+                    className="label-technical text-cyan mb-4 text-[10px] sm:text-xs"
                 >
                     THERMO EXPERT CONSTRUCTION COMPANY LTD
                 </motion.p>
@@ -71,7 +69,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.35 }}
-                    className="font-heading font-semibold leading-[1.05] text-4xl sm:text-6xl lg:text-[5rem] tracking-tight max-w-5xl"
+                    className="font-heading font-semibold leading-[1.08] text-3xl xs:text-4xl sm:text-6xl lg:text-[5rem] tracking-tight max-w-5xl"
                 >
                     <span>{renderAnimatedText("BUILDING TODAY.", 0)}</span>
                     <br />
@@ -96,11 +94,11 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.7 }}
-                    className="mt-8 flex flex-wrap items-center gap-4"
+                    className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4"
                 >
                     <Link
                         href="/our-work"
-                        className="group label-technical inline-flex items-center gap-3 bg-cyan text-navy px-6 py-3.5 text-xs sm:text-sm hover:bg-white transition-colors"
+                        className="group label-technical inline-flex items-center gap-3 bg-cyan text-navy px-5 py-3 sm:px-6 sm:py-3.5 text-xs sm:text-sm hover:bg-white transition-colors"
                     >
                         VIEW OUR WORK
                         <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -110,7 +108,7 @@ export default function Hero() {
 
                     <Link
                         href="/contact"
-                        className="group label-technical inline-flex items-center gap-3 border border-white/40 text-white px-6 py-3.5 text-xs sm:text-sm hover:border-cyan hover:text-cyan transition-colors"
+                        className="group label-technical inline-flex items-center gap-3 border border-white/40 text-white px-5 py-3 sm:px-6 sm:py-3.5 text-xs sm:text-sm hover:border-cyan hover:text-cyan transition-colors"
                     >
                         GET IN TOUCH
                         <span className="transition-transform duration-300 group-hover:translate-x-1">

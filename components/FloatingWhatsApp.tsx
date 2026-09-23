@@ -7,7 +7,7 @@ export default function FloatingWhatsApp() {
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
     return (
-        <aside aria-label="Support and Communication" className="fixed bottom-6 right-6 z-50 flex items-center justify-center">
+        <aside aria-label="Support and Communication" className="fixed bottom-24 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center justify-center">
             {/* Pulsing / Popping Wave Rings Behind the Button */}
             <span className="absolute w-14 h-14 rounded-full bg-[#25D366] opacity-75 animate-ping pointer-events-none" />
             <span className="absolute w-20 h-20 rounded-full border border-[#25D366]/60 animate-pulse pointer-events-none" />
