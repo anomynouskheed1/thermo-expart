@@ -6,22 +6,22 @@ const steps = [
     {
         number: "01",
         title: "CONSULTATION & BRIEF",
-        description: "Analyzing the architectural requirements, scope parameters, and technical expectations to lay a bulletproof foundation.",
+        description: "Understanding your project requirements, scope and expectations to lay a solid foundation.",
     },
     {
         number: "02",
-        title: "DESIGN & BLUEPRINTS",
-        description: "Drafting precise architectural schematics, structural engineering layouts, and material frameworks tailored to integrity.",
+        title: "PLANNING & PREPARATION",
+        description: "Preparing site plans, material requirements and a clear construction schedule.",
     },
     {
         number: "03",
-        title: "STRUCTURAL EXECUTION",
-        description: "Managing construction, fabrication, and site implementation with rigorous quality control and safety protocols.",
+        title: "CONSTRUCTION EXECUTION",
+        description: "Managing construction, site works and finishing with rigorous quality control and safety standards.",
     },
     {
         number: "04",
         title: "FINAL HANDOVER",
-        description: "Conducting meticulous structural inspections, stress testing, and delivering the completed project to your exact specs.",
+        description: "Conducting final inspections and quality checks, then delivering the completed project to your exact specs.",
     },
 ];
 
@@ -43,13 +43,13 @@ export default function ProcessSection() {
                             </p>
                         </div>
                         <h2 className="font-heading font-semibold text-3xl md:text-4xl lg:text-[3.5rem] leading-[1.05] tracking-[-0.03em] text-white">
-                            SYSTEMIZED <br />
+                            OUR CONSTRUCTION <br />
                             <span className="text-white/40">PROCESS.</span>
                         </h2>
                     </div>
 
                     <p className="text-white/80 font-body text-sm md:text-base max-w-md leading-relaxed">
-                        A continuous, phase-driven methodology designed to transition architectural visions into permanent physical realities.
+                        A clear, structured approach that takes every project from initial brief to completed build.
                     </p>
                 </div>
 

@@ -16,7 +16,7 @@ export default function Footer() {
                             THERMO <span className="text-cyan">EXPERT</span>
                         </Link>
                         <p className="font-body text-slate-600 text-xs max-w-sm leading-relaxed">
-                            An architectural approach to engineering and construction, delivering precise structural execution and modern project delivery.
+                            A construction contractor delivering quality building works for residential, commercial and development projects.
                         </p>
                     </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
                                 <Link href="/services" className="hover:text-cyan transition-colors">Services</Link>
                             </li>
                             <li>
-                                <Link href="/projects" className="hover:text-cyan transition-colors">Our Work</Link>
+                                <Link href="/our-work" className="hover:text-cyan transition-colors">Our Work</Link>
                             </li>
                             <li>
                                 <Link href="/contact" className="hover:text-cyan transition-colors">Contact</Link>
@@ -54,6 +54,9 @@ export default function Footer() {
                             <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors">Twitter / X</a>
                             <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-cyan transition-colors">Instagram</a>
                         </div>
+                        <p className="text-[10px] text-slate-400 mt-2 font-body">
+                            Social links placeholder — to be confirmed.
+                        </p>
                     </div>
 
                 </div>
@@ -61,7 +64,7 @@ export default function Footer() {
                 {/* Bottom Row: Copyright */}
                 <div className="pt-4 md:pt-6 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px] font-mono text-slate-500">
                     <p>&copy; {new Date().getFullYear()} Thermo Expert Construction Company Ltd. All rights reserved.</p>
-                    <p className="text-cyan font-medium">Architectural & Engineering Excellence</p>
+                    <p className="text-cyan font-medium">Building Today. Sustaining Tomorrow.</p>
                 </div>
 
             </div>

@@ -19,7 +19,7 @@ export default function AboutSection() {
                     <div className="relative aspect-[4/5] w-full max-w-[520px]">
                         <Image
                             src="/images/about.jpg"
-                            alt="Thermo Expert construction and engineering project"
+                            alt="Thermo Expert construction team at a building site"
                             fill
                             className="object-cover"
                             sizes="(max-width: 1024px) 100vw, 40vw"
@@ -46,19 +46,14 @@ export default function AboutSection() {
                     </h2>
 
                     <p className="text-concrete text-base md:text-lg leading-relaxed max-w-lg mb-4">
-                        Thermo Expert Construction Company Ltd delivers building
-                        construction, civil engineering and structural project
-                        solutions across Kenya — built on precision, quality and a
-                        commitment to lasting results.
+                        Thermo Expert Construction Company Ltd is a construction
+                        contractor focused on delivering quality building works for
+                        residential, commercial and development projects.
                     </p>
 
                     <p className="text-concrete text-base md:text-lg leading-relaxed max-w-lg mb-10">
-                        From foundation to finish, every project is approached with
-                        engineering discipline and an eye for detail that stands the
-                        test of time.
-                        <span className="block text-sm text-concrete/60 mt-3 italic">
-
-                        </span>
+                        From groundwork to final finishes, every project is approached
+                        with care, precision and a commitment to lasting results.
                     </p>
 
                     <Link

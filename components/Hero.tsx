@@ -45,7 +45,7 @@ export default function Hero() {
             <div className="absolute inset-0">
                 <Image
                     src="/images/hero.jpg"
-                    alt="Modern construction site — Thermo Expert Construction Company Ltd"
+                    alt="Thermo Expert construction team at an active building site"
                     fill
                     priority
                     className="object-cover saturate-[1.15] contrast-[1.08] brightness-[1.05]"
@@ -87,21 +87,32 @@ export default function Hero() {
                     transition={{ duration: 0.7, delay: 0.55 }}
                     className="text-white/80 text-sm sm:text-base md:text-lg max-w-xl mt-6 leading-relaxed"
                 >
-                    Construction and engineering solutions delivering quality,
-                    precision and lasting value across Kenya.
+                    Professional construction works for residential, commercial
+                    and development projects, delivered with quality, precision
+                    and care.
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.7 }}
-                    className="mt-8"
+                    className="mt-8 flex flex-wrap items-center gap-4"
                 >
                     <Link
                         href="/our-work"
                         className="group label-technical inline-flex items-center gap-3 bg-cyan text-navy px-6 py-3.5 text-xs sm:text-sm hover:bg-white transition-colors"
                     >
-                        EXPLORE OUR WORK
+                        VIEW OUR WORK
+                        <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            →
+                        </span>
+                    </Link>
+
+                    <Link
+                        href="/contact"
+                        className="group label-technical inline-flex items-center gap-3 border border-white/40 text-white px-6 py-3.5 text-xs sm:text-sm hover:border-cyan hover:text-cyan transition-colors"
+                    >
+                        GET IN TOUCH
                         <span className="transition-transform duration-300 group-hover:translate-x-1">
                             →
                         </span>

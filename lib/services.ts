@@ -16,94 +16,93 @@ export const services: Service[] = [
         number: "01",
         title: "Building Construction",
         tagline:
-            "Precision execution from ground-up structural frameworks to final architectural finishes.",
+            "Professional construction works for quality residential and commercial buildings, from groundwork through completion.",
         description:
-            "We deliver commercial, residential, and industrial structures with rigorous adherence to engineering tolerances, safety compliance, and timeline management. Every phase of the construction lifecycle is overseen to guarantee structural longevity.",
-        image:
-            "https://images.unsplash.com/photo-1541888946425-d0fbb18f864e?q=80&w=1200&auto=format&fit=crop",
+            "Professional construction works for quality residential and commercial buildings, from groundwork through completion.",
+        image: "/images/services/building-construction.png",
         features: [
-            "Full-scale site execution & project management",
-            "Reinforced concrete and structural steel framing",
-            "Foundation engineering and earthworks",
-            "Quality assurance & material stress testing",
+            "Groundwork and foundation works",
+            "Structural build and framing",
+            "Site supervision and quality checks",
+            "Completion and handover",
         ],
-        relatedProjectSlug: "commercial-tower-delta",
-        relatedProjectTitle: "Delta Commercial Complex",
+        relatedProjectSlug: "commercial-development",
+        relatedProjectTitle: "Commercial Development",
     },
+
     {
-        slug: "civil-engineering",
+        slug: "residential-construction",
         number: "02",
-        title: "Civil Engineering",
+        title: "Residential Construction",
         tagline:
-            "Robust infrastructure solutions engineered for heavy-duty performance and public utility.",
+            "Construction of homes and residential developments with careful attention to quality, detail and lasting results.",
         description:
-            "From earthworks and drainage systems to urban infrastructure development, our civil engineering team applies rigorous engineering standards to ensure public safety, longevity, and environmental sustainability.",
-        image:
-            "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=1200&auto=format&fit=crop",
+            "Construction of homes and residential developments with careful attention to quality, detail and lasting results.",
+        image: "/images/services/residential-construction.png",
         features: [
-            "Site grading, earthworks, and excavation planning",
-            "Stormwater management and subsurface drainage systems",
-            "Roadway paving and heavy access infrastructure",
-            "Geotechnical site investigation and soil stabilization",
+            "New home construction",
+            "Residential estate development",
+            "Quality finishes and detailing",
+            "On-site project coordination",
         ],
-        relatedProjectSlug: "industrial-park-phase1",
-        relatedProjectTitle: "Athi River Industrial Park",
+        relatedProjectSlug: "residential-development",
+        relatedProjectTitle: "Residential Development",
     },
+
     {
-        slug: "structural-works",
+        slug: "commercial-construction",
         number: "03",
-        title: "Structural Works",
+        title: "Commercial Construction",
         tagline:
-            "Structural systems designed and executed for strength, safety, and long-term stability.",
+            "Construction solutions for commercial spaces, business premises and developments built for practical use and long-term value.",
         description:
-            "Our structural works cover the calculation, design, and physical execution of load-bearing systems — from reinforced foundations to steel and concrete framing — ensuring every structure performs exactly as engineered.",
-        image:
-            "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+            "Construction solutions for commercial spaces, business premises and developments built for practical use and long-term value.",
+        image: "/images/services/commercial-construction.png",
         features: [
-            "Structural design and load calculation",
-            "Steel and reinforced concrete framing",
-            "Retrofitting and structural reinforcement",
-            "On-site structural quality inspection",
+            "Commercial premises construction",
+            "Business and retail spaces",
+            "Practical, durable build standards",
+            "Coordinated project delivery",
         ],
-        relatedProjectSlug: "commercial-tower-delta",
-        relatedProjectTitle: "Delta Commercial Complex",
+        relatedProjectSlug: "commercial-development",
+        relatedProjectTitle: "Commercial Development",
     },
+
     {
-        slug: "project-management",
+        slug: "renovation-remodeling",
         number: "04",
-        title: "Project Management",
+        title: "Renovation & Remodeling",
         tagline:
-            "End-to-end oversight keeping every project on schedule, on budget, and to specification.",
+            "Transforming existing buildings through renovation, remodeling and carefully executed improvement works.",
         description:
-            "We manage the full construction process — coordinating contractors, timelines, procurement, and site safety — so that each project moves from planning to handover without compromise on quality or cost.",
-        image:
-            "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
+            "Transforming existing buildings through renovation, remodeling and carefully executed improvement works.",
+        image: "/images/services/renovation-remodeling.png",
         features: [
-            "Timeline and budget control",
-            "Contractor and subcontractor coordination",
-            "Site safety and compliance oversight",
-            "Procurement and materials logistics",
+            "Building renovation and upgrades",
+            "Interior and exterior remodeling",
+            "Repair and restoration works",
+            "Improvement planning and execution",
         ],
-        relatedProjectSlug: "residential-villa-kilimani",
-        relatedProjectTitle: "Kilimani Executive Residence",
+        relatedProjectSlug: "residential-development",
+        relatedProjectTitle: "Residential Development",
     },
+
     {
-        slug: "renovation-development",
+        slug: "general-construction-works",
         number: "05",
-        title: "Renovation & Development",
+        title: "General Construction Works",
         tagline:
-            "Transforming existing structures through renovation, upgrades, and redevelopment.",
+            "Reliable construction execution covering a range of building, finishing and site works.",
         description:
-            "We assess, reinforce, and modernize existing buildings — extending their usable life and improving performance while preserving structural integrity throughout the renovation process.",
-        image:
-            "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop",
+            "Reliable construction execution covering a range of building, finishing and site works.",
+        image: "/images/services/general-construction-works.png",
         features: [
-            "Structural assessment and feasibility studies",
-            "Renovation and interior reconfiguration",
-            "Building upgrades and system modernization",
-            "Redevelopment planning and execution",
+            "General building works",
+            "Site preparation and finishing",
+            "Small to mid-scale construction jobs",
+            "Flexible, reliable execution",
         ],
-        relatedProjectSlug: "residential-villa-kilimani",
-        relatedProjectTitle: "Kilimani Executive Residence",
+        relatedProjectSlug: "commercial-development",
+        relatedProjectTitle: "Commercial Development",
     },
 ];

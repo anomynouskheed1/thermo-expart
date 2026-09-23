@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Phone, Mail, MessageCircle, ChevronDown } from "lucide-react";
+import { services } from "@/lib/services";
+import { main } from "framer-motion/client";
+import { WHATSAPP_NUMBER } from "@/lib/config";
 
 export default function ContactPage() {
     return (
@@ -18,7 +21,7 @@ export default function ContactPage() {
                             className="flex items-center gap-3 mb-4"
                         >
                             <span className="h-px w-8 bg-cyan" />
-                            <p className="label-technical text-cyan text-xs">INITIATE A PROJECT</p>
+                            <p className="label-technical text-cyan text-xs">GET IN TOUCH</p>
                         </motion.div>
 
                         <motion.h1
@@ -39,7 +42,7 @@ export default function ContactPage() {
                             transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                             className="text-blue/70 text-sm md:text-base font-body leading-relaxed"
                         >
-                            Connect with our engineering and architectural divisions directly or submit your project details below.
+                            Reach out directly or submit your project details below and our team will get back to you.
                         </motion.p>
                     </div>
                 </div>
@@ -64,11 +67,10 @@ export default function ContactPage() {
                             <span className="absolute top-0 left-0 h-[2px] w-0 bg-cyan transition-all duration-300 group-hover:w-full" />
                             <div className="flex items-center gap-2 mb-3 text-cyan font-mono text-[10px] tracking-widest uppercase">
                                 <MapPin className="w-3.5 h-3.5" />
-                                Headquarters
+                                Location
                             </div>
                             <p className="font-body text-blue/80 text-sm leading-relaxed">
-                                Delta Towers, Westlands<br />
-                                Chiromo Road<br />
+                                [Address to be provided]<br />
                                 Nairobi, Kenya
                             </p>
                         </motion.div>
@@ -82,13 +84,10 @@ export default function ContactPage() {
                             <span className="absolute top-0 left-0 h-[2px] w-0 bg-cyan transition-all duration-300 group-hover:w-full" />
                             <div className="flex items-center gap-2 mb-3 text-cyan font-mono text-[10px] tracking-widest uppercase">
                                 <Phone className="w-3.5 h-3.5" />
-                                Phone Lines
+                                Phone
                             </div>
                             <p className="font-heading text-lg text-blue font-medium">
-                                +254 712 345 678
-                            </p>
-                            <p className="font-heading text-sm text-blue/50 mt-0.5">
-                                +254 733 987 654
+                                [Phone number to be provided]
                             </p>
                         </motion.div>
 
@@ -101,17 +100,18 @@ export default function ContactPage() {
                             <span className="absolute top-0 left-0 h-[2px] w-0 bg-cyan transition-all duration-300 group-hover:w-full" />
                             <div className="flex items-center gap-2 mb-3 text-cyan font-mono text-[10px] tracking-widest uppercase">
                                 <Mail className="w-3.5 h-3.5" />
-                                Email Address
+                                Email
                             </div>
                             <p className="font-body text-blue/80 text-sm">
-                                inquiries@thermoexpert.co.ke
+                                [Email to be provided]
                             </p>
                         </motion.div>
 
                         {/* WhatsApp Quick CTA */}
                         <div>
+
                             <a
-                                href="https://wa.me/254712345678"
+                                href={`https://wa.me/${WHATSAPP_NUMBER}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-between w-full bg-[#25D366]/10 border border-[#25D366]/30 px-6 py-4 hover:bg-[#25D366] hover:text-white transition-all duration-300 group"
@@ -124,10 +124,13 @@ export default function ContactPage() {
                                 </div>
                                 <span className="text-sm text-[#25D366] group-hover:text-white transition-transform group-hover:translate-x-1">→</span>
                             </a>
+                            <p className="text-[11px] text-blue/40 mt-2 font-body">
+                                WhatsApp number placeholder — update in configuration.
+                            </p>
                         </div>
                     </div>
 
-                    {/* Right Column: Clean Single-Column Form (Fixed padding & overflow layout) */}
+                    {/* Right Column: Enquiry Form */}
                     <div className="lg:col-span-8 bg-[#EBEBE6] border border-black/15 p-8 md:p-12">
                         <div className="mb-8 pb-4 border-b border-black/10">
                             <p className="font-body text-blue text-base md:text-lg">
@@ -180,10 +183,11 @@ export default function ContactPage() {
                                         <option value="" disabled className="text-blue/30">
                                             Select a service
                                         </option>
-                                        <option value="HVAC Engineering">HVAC Engineering</option>
-                                        <option value="Commercial Installation">Commercial Installation</option>
-                                        <option value="Thermal Auditing">Thermal Auditing</option>
-                                        <option value="Maintenance & Support">Maintenance & Support</option>
+                                        {services.map((service) => (
+                                            <option key={service.slug} value={service.title}>
+                                                {service.title}
+                                            </option>
+                                        ))}
                                     </select>
                                     <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-blue">
                                         <ChevronDown className="w-4 h-4" />
@@ -205,7 +209,7 @@ export default function ContactPage() {
                                 />
                             </div>
 
-                            {/* Submit Button (Fully Unclipped) */}
+                            {/* Submit Button */}
                             <div className="pt-4">
                                 <button
                                     type="submit"
@@ -219,30 +223,18 @@ export default function ContactPage() {
                     </div>
                 </div>
 
-                {/* Working Google Map Embed Section */}
-                <div className="mt-16 border border-black/15 bg-[#EBEBE6] h-[350px] md:h-[420px] relative overflow-hidden shadow-sm">
-                    <iframe
-                        title="Delta Towers Location Map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8199175713437!2d36.81057457675058!3d-1.263503935626887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173b2210b37f%3A0x62953282b09a4d8c!2sDelta%20Towers%2C%20Chiromo%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1710000000000!5m2!1sen!2ske"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0, filter: "grayscale(20%) contrast(110%)" }}
-                        allowFullScreen={false}
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        className="w-full h-full"
-                    />
-                    {/* Location Overlay Tag */}
-                    <div className="absolute bottom-6 left-6 z-10 hidden sm:flex items-center gap-3 p-4 border border-black/15 bg-white/95 backdrop-blur-md shadow-sm">
-                        <MapPin className="w-5 h-5 text-cyan shrink-0" />
-                        <div>
-                            <p className="font-mono text-[9px] tracking-widest uppercase text-concrete">HEADQUARTERS</p>
-                            <p className="font-heading text-sm text-blue font-medium">Delta Towers, Westlands, Nairobi</p>
-                        </div>
+                {/* Map Placeholder Section */}
+                <div className="mt-16 border border-black/15 bg-[#EBEBE6] h-[350px] md:h-[420px] relative overflow-hidden shadow-sm flex items-center justify-center">
+                    <div className="text-center px-6">
+                        <MapPin className="w-6 h-6 text-cyan mx-auto mb-3" />
+                        <p className="font-heading text-blue text-lg mb-1">Map placeholder</p>
+                        <p className="font-body text-blue/50 text-sm">
+                            Location map will be added once the office address is confirmed.
+                        </p>
                     </div>
                 </div>
 
             </div>
-        </main>
+        </main >
     );
 }

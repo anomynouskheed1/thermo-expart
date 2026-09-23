@@ -19,7 +19,7 @@ export default function OurWorkPage() {
                         className="flex items-center gap-3 mb-3"
                     >
                         <span className="h-px w-8 bg-cyan" />
-                        <p className="label-technical text-cyan text-xs">PORTFOLIO ARCHIVE</p>
+                        <p className="label-technical text-cyan text-xs">OUR WORK</p>
                     </motion.div>
 
                     <motion.h1
@@ -28,11 +28,10 @@ export default function OurWorkPage() {
                         transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                         className="font-heading font-semibold text-4xl md:text-6xl lg:text-[5.2rem] leading-[0.95] tracking-[-0.03em]"
                     >
-                        SELECTED <br />
-                        <span className="text-white/40">WORKS.</span>
+                        WHAT WE <br />
+                        <span className="text-white/40">BUILD.</span>
                     </motion.h1>
                 </div>
-
                 {/* Asymmetric Editorial Portfolio Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 items-start">
                     {projects.map((project, i) => {

@@ -3,8 +3,8 @@
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { projects } from "@/lib/projects";
 
-// Helper animation variants typed securely for Framer Motion
 const letterAnimation: Variants = {
     hidden: { opacity: 0, y: 20, scale: 0.9 },
     visible: (i: number) => ({
@@ -23,6 +23,7 @@ const letterAnimation: Variants = {
 export default function FinalCtaSection() {
     const line1 = "HAVE A PROJECT";
     const line2 = "IN MIND?";
+    const featured = projects[0];
 
     return (
         <section className="relative bg-offwhite text-blue overflow-hidden py-24 md:py-32 border-t border-black/10">
@@ -38,7 +39,7 @@ export default function FinalCtaSection() {
                     <div className="relative z-10 lg:col-span-7">
                         <div className="flex items-center gap-3 mb-6">
                             <span className="h-px w-8 bg-cyan" />
-                            <p className="label-technical text-cyan text-xs">INITIATE COLLABORATION</p>
+                            <p className="label-technical text-cyan text-xs">GET IN TOUCH</p>
                         </div>
 
                         {/* Letter-by-letter bouncy animated heading */}
@@ -76,7 +77,7 @@ export default function FinalCtaSection() {
                         </h2>
 
                         <p className="font-body text-blue/70 text-base md:text-lg max-w-xl mb-10 leading-relaxed">
-                            &ldquo;Let&apos;s discuss how Thermo Expert can bring your next project to life.&rdquo;
+                            Let&apos;s talk about your next construction project.
                         </p>
 
                         <div>
@@ -84,7 +85,7 @@ export default function FinalCtaSection() {
                                 href="/contact"
                                 className="inline-flex items-center gap-4 bg-blue text-offwhite font-mono text-xs uppercase tracking-widest px-8 py-4 font-medium hover:bg-cyan hover:text-blue transition-colors duration-300 group"
                             >
-                                CONTACT THERMO EXPERT
+                                GET IN TOUCH
                                 <span className="text-base transition-transform duration-300 group-hover:translate-x-2 text-cyan group-hover:text-blue">
                                     →
                                 </span>
@@ -95,8 +96,8 @@ export default function FinalCtaSection() {
                     {/* Right Column: Architectural Project Photo */}
                     <div className="relative lg:col-span-5 h-[350px] md:h-[420px] w-full border border-black/15 overflow-hidden group">
                         <Image
-                            src="/images/projects/project-1.jpg"
-                            alt="Thermo Expert completed construction project"
+                            src={featured.image}
+                            alt={`${featured.title} — completed construction project`}
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -104,7 +105,7 @@ export default function FinalCtaSection() {
                         {/* Subtle inner framing overlay */}
                         <div className="absolute inset-0 border border-white/20 pointer-events-none m-3" />
                         <div className="absolute bottom-4 left-4 bg-blue/90 backdrop-blur-md px-4 py-2 border border-white/10 text-offwhite text-[11px] font-mono uppercase tracking-wider">
-                            Featured Project // 01
+
                         </div>
                     </div>
 

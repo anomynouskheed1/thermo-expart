@@ -5,23 +5,23 @@ import { motion } from "framer-motion";
 const qualities = [
     {
         number: "01",
-        title: "QUALITY",
-        description: "Executing every structural phase with uncompromising attention to material standards and finish.",
+        title: "QUALITY WORKMANSHIP",
+        description: "Executing every phase of construction with uncompromising attention to material standards and finish.",
     },
     {
         number: "02",
-        title: "PRECISION",
-        description: "Translating complex engineering blueprints into exact, measured structural reality.",
+        title: "ATTENTION TO DETAIL",
+        description: "Translating project plans into precise, carefully executed construction work.",
     },
     {
         number: "03",
-        title: "RELIABILITY",
-        description: "Delivering consistent execution through structured methodologies and dependable oversight.",
+        title: "RELIABLE DELIVERY",
+        description: "Delivering consistent execution through structured methods and dependable site oversight.",
     },
     {
         number: "04",
-        title: "PROFESSIONALISM",
-        description: "Maintaining rigorous standards of communication, coordination, and technical accountability.",
+        title: "PROFESSIONAL EXECUTION",
+        description: "Maintaining rigorous standards of communication, coordination, and on-site accountability.",
     },
 ];
 
@@ -35,17 +35,17 @@ export default function WhyThermoSection() {
                     <div className="lg:col-span-7">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="h-px w-8 bg-cyan" />
-                            <p className="label-technical text-cyan text-xs">CORE PILLARS</p>
+                            <p className="label-technical text-cyan text-xs">WHY CHOOSE US</p>
                         </div>
                         <h2 className="font-heading font-semibold text-4xl md:text-5xl lg:text-[4rem] leading-[0.95] tracking-[-0.03em] text-blue">
-                            WHY THERMO <br />
-                            <span className="text-concrete">EXPERT.</span>
+                            WHY CHOOSE <br />
+                            <span className="text-concrete">THERMO EXPERT.</span>
                         </h2>
                     </div>
 
                     <div className="lg:col-span-5 border-l border-black/10 pl-6">
                         <p className="text-blue/70 font-body text-sm md:text-base leading-relaxed">
-                            Rooted in an architectural approach to engineering and construction, our framework is defined by structural discipline and uncompromising standards.
+                            A construction contractor built on quality workmanship, careful attention to detail and dependable project delivery.
                         </p>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ export default function WhyThermoSection() {
                                 </span>
                             </div>
 
-                            <h3 className="font-heading font-medium text-2xl md:text-3xl text-blue group-hover:text-cyan transition-colors duration-300 mb-3 tracking-[-0.02em]">
+                            <h3 className="font-heading font-medium text-xl md:text-2xl text-blue group-hover:text-cyan transition-colors duration-300 mb-3 tracking-[-0.02em]">
                                 {item.title}
                             </h3>
 

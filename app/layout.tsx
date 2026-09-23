@@ -10,8 +10,24 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Thermo Expert | Architectural & Engineering Excellence",
-  description: "Precision architectural design, building construction, and civil engineering.",
+  title: "Thermo Expert Construction Company Ltd | Construction Contractor, Kenya",
+  description:
+    "Thermo Expert Construction Company Ltd is a construction contractor delivering quality building works for residential, commercial and development projects across Kenya.",
+  keywords: [
+    "construction company Kenya",
+    "construction contractor Kenya",
+    "building construction",
+    "residential construction",
+    "commercial construction",
+    "renovation and remodeling",
+    "Thermo Expert Construction",
+  ],
+  openGraph: {
+    title: "Thermo Expert Construction Company Ltd",
+    description:
+      "Professional construction works for residential, commercial and development projects, delivered with quality, precision and care.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

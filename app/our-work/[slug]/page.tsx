@@ -24,7 +24,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 <div className="mb-8">
                     <Link
                         href="/our-work"
-                        className="inline-flex items-center gap-2 font-mono text-xs text-white/60 hover:text-cyan transition-colors"
+                        className="inline-flex items-center gap-2 label-technical text-white/60 hover:text-cyan transition-colors"
                     >
                         <ArrowLeft className="w-4 h-4" />
                         BACK TO ARCHIVE
@@ -32,8 +32,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 </div>
 
                 {/* Project Header Info */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 border-b border-white/15 mb-12">
-                    <div className="lg:col-span-8">
+                <div className="pb-12 border-b border-white/15 mb-12">
+                    <div className="mb-10">
                         <div className="flex items-center gap-3 mb-3">
                             <span className="h-px w-8 bg-cyan" />
                             <p className="label-technical text-cyan text-xs">PROJECT #{project.slug.toUpperCase()}</p>
@@ -46,31 +46,46 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                         </p>
                     </div>
 
-                    {/* Meta Specifications Box */}
-                    <div className="lg:col-span-4 bg-[#151c24] border border-white/15 p-6 space-y-4 font-mono text-xs">
-                        <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                            <span className="text-white/50 flex items-center gap-2">
-                                <MapPin className="w-3.5 h-3.5 text-cyan" /> Location
-                            </span>
-                            <span className="text-white">{project.location || "Nairobi, Kenya"}</span>
+                    {/* Stat strip */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 pt-8 border-t border-white/10">
+                        <div>
+                            <div className="flex items-center gap-2 mb-2 text-white/40">
+                                <MapPin className="w-3.5 h-3.5 text-cyan" />
+                                <span className="label-technical text-[11px]">Location</span>
+                            </div>
+                            <p className="font-heading text-base md:text-lg text-white">
+                                {project.location || "Nairobi, Kenya"}
+                            </p>
                         </div>
-                        <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                            <span className="text-white/50 flex items-center gap-2">
-                                <Layers className="w-3.5 h-3.5 text-cyan" /> Project Type
-                            </span>
-                            <span className="text-white">{project.category}</span>
+
+                        <div>
+                            <div className="flex items-center gap-2 mb-2 text-white/40">
+                                <Layers className="w-3.5 h-3.5 text-cyan" />
+                                <span className="label-technical text-[11px]">Project Type</span>
+                            </div>
+                            <p className="font-heading text-base md:text-lg text-white">
+                                {project.category}
+                            </p>
                         </div>
-                        <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                            <span className="text-white/50 flex items-center gap-2">
-                                <CheckCircle2 className="w-3.5 h-3.5 text-cyan" /> Status
-                            </span>
-                            <span className="text-cyan uppercase">Completed (Demo)</span>
+
+                        <div>
+                            <div className="flex items-center gap-2 mb-2 text-white/40">
+                                <CheckCircle2 className="w-3.5 h-3.5 text-cyan" />
+                                <span className="label-technical text-[11px]">Status</span>
+                            </div>
+                            <p className="font-heading text-base md:text-lg text-cyan">
+                                Completed
+                            </p>
                         </div>
-                        <div className="flex items-center justify-between">
-                            <span className="text-white/50 flex items-center gap-2">
-                                <Calendar className="w-3.5 h-3.5 text-cyan" /> Timeline
-                            </span>
-                            <span className="text-white">{project.year || "2026"}</span>
+
+                        <div>
+                            <div className="flex items-center gap-2 mb-2 text-white/40">
+                                <Calendar className="w-3.5 h-3.5 text-cyan" />
+                                <span className="label-technical text-[11px]">Timeline</span>
+                            </div>
+                            <p className="font-heading text-base md:text-lg text-white">
+                                {project.year || "2026"}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -91,27 +106,23 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
                     <div className="lg:col-span-5 space-y-6">
                         <h2 className="font-heading text-2xl md:text-3xl font-medium tracking-tight">
-                            ARCHITECTURAL SCOPE & EXECUTION
+                            SCOPE &amp; EXECUTION
                         </h2>
                         <p className="text-white/70 font-body text-sm md:text-base leading-relaxed">
-                            This installation highlights our commitment to structural integrity, precise spatial planning, and high-performance material standards. Every phase was engineered to align with rigorous safety parameters and contemporary design constraints.
+                            {project.overview}
                         </p>
                         <div className="pt-4 border-t border-white/10">
-                            <ul className="space-y-3 font-mono text-xs text-white/80">
-                                <li className="flex items-center gap-3">
-                                    <span className="w-1.5 h-1.5 bg-cyan rounded-full" /> Full Structural Framework Analysis
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <span className="w-1.5 h-1.5 bg-cyan rounded-full" /> Advanced Material Stress Testing
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <span className="w-1.5 h-1.5 bg-cyan rounded-full" /> Supervised Site Execution & Oversight
-                                </li>
+                            <ul className="space-y-3 font-body text-sm text-white/80">
+                                {project.scope.map((item, idx) => (
+                                    <li key={idx} className="flex items-center gap-3">
+                                        <span className="w-1.5 h-1.5 bg-cyan rounded-full shrink-0" />
+                                        {item}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
 
-                    {/* Secondary Gallery Showcase */}
                     {/* Secondary Gallery Showcase */}
                     <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
                         {project.gallery.map((img, idx) => (
@@ -129,26 +140,27 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                             </div>
                         ))}
                     </div>
-                    {/* Final Project CTA Section */}
-                    <div className="border border-white/15 bg-[#151c24]/50 p-8 md:p-12 text-center relative overflow-hidden">
-                        <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-2"></div>
-                        <div className="relative z-10 max-w-xl mx-auto">
-                            <h2 className="font-heading text-2xl md:text-3xl font-medium mb-3">
-                                READY TO START YOUR BUILD?
-                            </h2>
-                            <p className="text-white/60 text-xs md:text-sm font-body mb-6">
-                                Let&apos;s discuss how Thermo Expert can apply this level of precision to your upcoming development.
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center gap-3 bg-cyan text-navy font-mono text-xs tracking-widest uppercase px-6 py-3.5 font-medium hover:bg-white transition-colors"
-                            >
-                                INITIATE CONSULTATION →
-                            </Link>
-                        </div>
-                    </div>
-
                 </div>
+
+                {/* Final Project CTA Section */}
+                <div className="border border-white/15 bg-[#151c24]/50 p-8 md:p-12 text-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.02]" />
+                    <div className="relative z-10 max-w-xl mx-auto">
+                        <h2 className="font-heading text-2xl md:text-3xl font-medium mb-3">
+                            READY TO START YOUR BUILD?
+                        </h2>
+                        <p className="text-white/60 text-sm font-body mb-6">
+                            Let&apos;s discuss how Thermo Expert can apply this level of precision to your upcoming development.
+                        </p>
+                        <Link
+                            href="/contact"
+                            className="inline-flex items-center justify-center gap-3 bg-cyan text-navy label-technical px-6 py-3.5 font-medium hover:bg-white transition-colors"
+                        >
+                            INITIATE CONSULTATION →
+                        </Link>
+                    </div>
+                </div>
+
             </div>
         </main>
     );
