@@ -20,9 +20,9 @@ export const projects: Project[] = [
         category: "Renovation",
         location: "Nairobi, Kenya", // TODO: confirm
         year: "2026", // TODO: confirm
-        image: "/images/projects/1.jpeg",
+        image: "/images/projects/2.jpeg",
         gallery: [
-            "/images/projects/2.jpeg",
+            "/images/projects/1.jpeg",
             "/images/projects/3.jpeg",
             "/images/projects/4.jpeg",
             "/images/projects/5.jpeg",
